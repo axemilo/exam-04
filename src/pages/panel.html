@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN PANEL</title>
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <ul id="admin-panel-list" class="list-unstyled"></ul>
+    </div>
+    <template id="admin-panel-item-template">
+      <li id="admin-panel-item">
+        <ul id="admin-panel-item-list" class="list-unstyled">
+          <li id="admin-panel-item-list_item d-flex flex-row">
+            <p id="admin-panel-item-list_text" class="fw-bolder h3"></p>
+            <button id="admin-panel-item-list_btn-update" class="btn btn-secondary" type="button">
+              Update
+            </button>
+            <button id="admin-panel-item-list_btn-delete" class="btn btn-primary" type="button">
+              Delete
+            </button>
+          </li>
+        </ul>
+      </li>
+    </template>
+    <script src="../js/panel.js"></script>
+  </body>
+</html>

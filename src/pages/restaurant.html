@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurants</title>
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <section class="header__section">
+      <div class="container-xxl d-flex justify-content-between align-items-center">
+        <a class="header__home__text h1 text-decoration-none point" href="../index.html">HOME</a>
+        <ul class="list-unstyled">
+          <li>
+            <a class="text-dark" href="./register.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="main">
+      <div class="container">
+        <ul id="main-list-foods" class="d-flex flex-column list-unstyled"></ul>
+      </div>
+    </section>
+    <template id="main-item-template-foods">
+      <li class="main__item__foods w-50">
+        <img id="main-item-foods-img" src="" alt="" class="main__item-img w-100" />
+        <p id="main-item-foods-title" class="main__text text h1 fw-bold"></p>
+        <p id="main-item-foods-price" class="fw-bolder"></p>
+        <p id="main-item-foods-description"></p>
+        <button id="main-item-foods-btn" type="button" class="unsignedUp btn btn-dark">Buy</button>
+      </li>
+    </template>
+    <script src="../js/food.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__section {
+  margin-bottom: 200px;
+}
+
+.main__item-img {
+  object-fit: cover;
+  width: 200px;
+}
+
+.header__home__text {
+  cursor: pointer;
+  margin: 35px;
+  transition: all 300ms ease;
+}
+
+.main__restaurant__title {
+  margin-bottom: 55px;
+}
+
+.main__restaurant__text {
+  transition: all 300ms ease;
+}
+.main__restaurant__text:hover {
+  color: #0a32b8;
+}
+
+.main__item__foods {
+  margin-bottom: 40px;
+}
