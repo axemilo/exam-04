@@ -5,19 +5,26 @@ const formLoginPassword = document.getElementById('form-login-password')
 
 const createAdmin = `
 mutation Mutation($adminName: String!, $password: String!) {
-  register(adminName: $adminName, password: $password) {
+  login(adminName: $adminName, password: $password) {
     data
     message
     token
   }
 }
 `
+
+let token = localStorage.getItem('token')
+if (token) {
+  window.location.replace('../pages/panel.html')
+}
+
 async function handleAddAdmin(evt) {
+  evt.preventDefault()
+
   let variables = {
     adminName: formLoginUsername.value,
     password: formLoginPassword.value,
   }
-  evt.preventDefault()
 
   console.log(variables)
   let response = await fetch('http://localhost:4000/graphql', {
@@ -31,8 +38,8 @@ async function handleAddAdmin(evt) {
   let { data } = await response.json()
   console.log(data)
   if (data) {
+    localStorage.setItem('token', data.login.token)
     window.location.replace('../pages/panel.html')
-    localStorage.setItem('token', data.register.token)
   } else {
     alert('something wrong. Try AGAIN!')
   }

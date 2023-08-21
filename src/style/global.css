@@ -46,3 +46,11 @@ a {
 .main__item__foods {
   margin-bottom: 40px;
 }
+
+.korzina-list::before {
+  content: attr(data-before);
+  position: absolute;
+  color: #fff;
+  font-size: 24px;
+  background-color: red;
+}

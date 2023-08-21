@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/global.css" />
+  </head>
+  <body>
+    <section class="main my-5">
+      <div class="container">
+        <h2>Create Food</h2>
+        <form id="create-food-form" action="" method="post" class="w-25">
+          <input
+            id="create-food-form-name"
+            class="form-control my-3"
+            type="text"
+            placeholder="Input food name..."
+          />
+          <input
+            id="create-food-form-description"
+            class="form-control my-3"
+            type="text"
+            placeholder="Input food description"
+          />
+          <input
+            id="create-food-form-price"
+            class="form-control my-3"
+            type="int"
+            placeholder="Input food price"
+          />
+          <input
+            id="create-food-form-categories"
+            class="form-control my-3"
+            type="int"
+            placeholder="Input food categories "
+          />
+          <input id="create-food-form-img" class="form-control my-3" type="file" />
+          <button id="create-form-submit" class="btn btn-success" type="submit">Create</button>
+        </form>
+      </div>
+    </section>
+    <script src="../js/Create/createFood.js"></script>
+  </body>
+</html>

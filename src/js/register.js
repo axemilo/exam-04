@@ -15,13 +15,13 @@ mutation Mutation($username: String!, $password: String!, $email: String!, $bala
 }
 `
 async function handleAddUser(evt) {
+  evt.preventDefault()
   let variables = {
     username: formSignupUsername.value,
     password: formSignupPassword.value,
     email: formSignupEmail.value,
     balance: formSignupBalance.value - 0,
   }
-  evt.preventDefault()
 
   console.log(variables)
   let response = await fetch('http://localhost:4000/graphql', {
@@ -33,11 +33,14 @@ async function handleAddUser(evt) {
     }),
   })
   let { data } = await response.json()
+  console.log(data)
+
   if (data) {
     window.location.replace('../pages/restaurant.html')
     localStorage.setItem('token', data.createUser.token)
+    localStorage.setItem('userId', data.createUser.data.user_id)
   } else {
-    alert('something wrong. Try AGAIN!')
+    alert('something WRONG')
   }
 }
 
